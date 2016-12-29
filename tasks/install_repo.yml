@@ -1,0 +1,5 @@
+---
+- name: install cloudera CDH hadoop repo
+  yum:
+    name: "{{ cdh_repo_rpmaddr }}"
+    state: present

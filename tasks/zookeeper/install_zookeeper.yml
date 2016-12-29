@@ -1,0 +1,6 @@
+---
+- name: install zookeeper
+  yum:
+    name: zookeeper-server
+    state: present
+    enablerepo: cloudera-cdh5

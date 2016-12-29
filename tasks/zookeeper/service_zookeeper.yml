@@ -1,0 +1,5 @@
+---
+- name: start zookeeper service
+  service:
+    name: zookeeper-server
+    state: started

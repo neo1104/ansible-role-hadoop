@@ -1,0 +1,9 @@
+---
+- name: include install_zookeeper.yml
+  include: install_zookeeper.yml
+
+- name: include configure_zookeeper.yml
+  include: configure_zookeeper.yml
+
+- name: include service zookeeper.yml
+  include: service_zookeeper.yml

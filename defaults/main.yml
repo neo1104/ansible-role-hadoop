@@ -1,0 +1,25 @@
+---
+# defaults file for roles/hadoop
+
+java_home: /usr/java/default
+cdh_repo_rpmaddr: https://archive.cloudera.com/cdh5/one-click-install/redhat/6/x86_64/cloudera-cdh-5-0.x86_64.rpm
+zookeeper_node_id: 1
+zookeeper_node_name: zoo1
+zookeeper_conf_dir: /etc/zookeeper/conf
+zookeeper_data_dir: /var/lib/zookeeper
+zookeeper_datalog_dir: /var/lib/zookeeper
+zookeeper_myid_dir: /var/lib/zookeeper
+zookeeper_client_port: 2181
+zookeeper_leader_port: 2888
+zookeeper_election_port: 3888
+zookeeper_install_type: standlone
+zookeeper_server_list: []
+
+flume_conf_dir: /etc/flume-ng/conf
+flume_agent_name: agent
+flume_source_name: seqGenSrc
+flume_channel_name: memoryChannel
+flume_sink_name: loggerSink
+flume_source_type: seq
+flume_channel_type: memory
+flume_sink_type: logger

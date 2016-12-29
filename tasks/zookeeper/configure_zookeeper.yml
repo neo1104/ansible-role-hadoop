@@ -1,0 +1,15 @@
+---
+- name: configure zookeeper
+  template:
+    src: zookeeper/zoo.cfg.j2
+    dest: /etc/zookeeper/conf/zoo.cfg
+    owner: root
+    mode: 0644
+
+- name: zookeeper init
+  shell: service zookeeper-server init
+  ignore_errors: yes
+
+- name: include configure zookeeper cluster
+  include: configure_zookeeper_cluster.yml
+  when: zookeeper_install_type == "cluster"

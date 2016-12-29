@@ -1,0 +1,16 @@
+---
+# tasks file for roles/hadoop
+- name: include install_repo.yml
+  include: install_repo.yml
+  tags:
+    - repo
+
+- name: include zookeeper.yml
+  include: zookeeper/zookeeper.yml
+  tags:
+    - zookeeper
+
+- name: include flume.yml
+  include: flume/flume.yml
+  tags:
+    - flume

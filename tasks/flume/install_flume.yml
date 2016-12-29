@@ -1,0 +1,6 @@
+---
+- name: install flume-ng
+  yum:
+    name: flume-ng-agent
+    state: present
+    enablerepo: cloudera-cdh5

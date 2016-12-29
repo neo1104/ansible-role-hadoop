@@ -1,0 +1,16 @@
+---
+- name: generate myid file
+  template:
+    src: zookeeper/myid.j2
+    dest: "{{ zookeeper_myid_dir }}/myid"
+    owner: root
+    mode: 0644
+
+- name: configure zookeeper cluster
+  lineinfile:
+    dest: "{{ zookeeper_conf_dir }}/zoo.cfg"
+    line: "{{ item }}"
+    state: present
+  with_items: "{{ zookeeper_server_list }}"
+  notify:
+    - restart zookeeper server
