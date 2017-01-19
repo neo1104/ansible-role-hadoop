@@ -4,6 +4,8 @@
   include: install_repo.yml
   tags:
     - repo
+    - zookeeper
+    - flume
 
 - name: include zookeeper.yml
   include: zookeeper/zookeeper.yml

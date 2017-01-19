@@ -16,10 +16,4 @@ zookeeper_install_type: standlone
 zookeeper_server_list: []
 
 flume_conf_dir: /etc/flume-ng/conf
-flume_agent_name: agent
-flume_source_name: seqGenSrc
-flume_channel_name: memoryChannel
-flume_sink_name: loggerSink
-flume_source_type: seq
-flume_channel_type: memory
-flume_sink_type: logger
+flume_classpath: '""'

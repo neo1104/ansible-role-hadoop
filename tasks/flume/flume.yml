@@ -4,6 +4,3 @@
 
 - name: include configure_flume.yml
   include: configure_flume.yml
-
-- name: include service zookeeper.yml
-  include: service_flume.yml

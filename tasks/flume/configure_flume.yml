@@ -1,19 +1,7 @@
 ---
-- name: copy flume agent confgure file
-  template:
-    src:  flume/flume.conf.j2
-    dest: "{{ flume_conf_dir }}/flume.conf"
-    owner: root
-    mode: 0644
-  notify:
-    - restart flume agent
-
-
 - name: copy flume agent env shell file
   template:
     src: flume/flume-env.sh.j2
     dest: "{{ flume_conf_dir }}/flume-env.sh"
     owner: root
     mode: 0644
-  notify:
-    - restart flume agent

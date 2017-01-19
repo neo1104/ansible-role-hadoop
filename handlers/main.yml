@@ -4,8 +4,3 @@
   service:
     name: zookeeper-server
     state: restarted
-
-- name: restart flume agent
-  service:
-    name: flume-ng-agent
-    state: restarted

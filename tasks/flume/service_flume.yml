@@ -1,5 +1,0 @@
----
-- name: service flume agent
-  service:
-    name: flume-ng-agent
-    state: started
